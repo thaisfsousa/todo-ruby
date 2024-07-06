@@ -1,0 +1,14 @@
+<h1>List Details</h1>
+
+<p>
+  <strong>Description:</strong>
+  <%= @list.description %>
+</p>
+
+p>
+  <strong>Completed:</strong>
+  <%= @list.completed ? 'Yes' : 'No' %>
+</p>
+
+<%= link_to 'Edit', edit_list_path(@list) %> |
+<%= link_to 'Back', lists_path %>

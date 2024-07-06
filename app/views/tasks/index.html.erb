@@ -1,0 +1,26 @@
+<h1>All Tasks</h1>
+
+<%= link_to 'New Task', new_list_task_path, class:"newList" %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Completed</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @tasks.each do |task| %>
+      <tr>
+        <td><%= task.description %></td>
+        <td><%= task.completed ? 'Yes' : 'No' %></td>
+        <td>
+          <%= link_to 'Show', list_task(task) %>
+          <%= link_to 'Edit', edit_list_task_path(task) %>
+          <%= link_to 'Delete', list_task_path(task), method: :delete, data: { confirm: 'Are you sure?', turbolinks: false } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

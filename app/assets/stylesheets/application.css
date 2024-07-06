@@ -1,0 +1,106 @@
+
+h1{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 10px; 
+    margin-bottom: 50px;
+    align-content: center;
+  }
+  
+  td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+
+  input[type="submit"] {
+    background-color: #bdc7be; 
+    color: black;
+    padding: 12px 20px; 
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+  background-color: #a9a6a6;
+}
+  
+  .actions {
+    white-space: nowrap;
+    align-items: center;
+  }
+
+  .action{
+    padding: 8px;
+    color: black;
+    border-radius: 10%;
+    width: 50px;
+    margin-left: 15px;
+    background-color: rgb(234, 232, 230);
+  }
+  
+  .description{
+    width: 45%;
+  }
+
+  .action:hover{
+    cursor: pointer;
+    color: white;
+  }
+
+  .newList {
+    display: inline-flex;
+    padding: 20px;
+    color: black;
+    background-color: #bdc7be;
+    font-size: 20px;
+    margin-right: 10%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .newList:hover {
+    cursor: pointer;
+    color: white;
+  }
+
+  .text-box{
+    width: 40%;
+    height: 50px;
+    font-size: 18px;
+    margin-left: 50px;
+  }
+
+  .between{
+    padding: 20px;
+    margin-left: 30%;
+  }
+
+  .between2{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+  }
+
+  hr{
+    padding: 20px;
+    color: white;
+    border: none;
+  }

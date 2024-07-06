@@ -1,0 +1,28 @@
+<h1>All Lists</h1>
+
+<div class="teste2">
+  <%= link_to 'New List', new_list_path, class:"newList" %>
+</div>
+<table>
+  <thead>
+    <tr>
+      <th style="margin-right:50px">Description</th>
+      <th>Completed</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @lists.each do |list| %>
+      <tr>
+        <td class="description"><%= list.description %></td>
+        <td><%= list.completed ? 'Yes' : 'No' %></td>
+        <td class="actions">
+          <%= link_to 'Show', list_path(list), class:"action" %>
+          <%= link_to 'Edit', edit_list_path(list), class:"action" %>
+          <%= link_to 'Delete', list_path(list), method: :delete, data: { confirm: 'Are you sure?' }, class:"action" %>
+          <%= link_to 'View Tasks', list_tasks_path(list), class:"action" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
