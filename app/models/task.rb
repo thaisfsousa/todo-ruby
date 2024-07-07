@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
+# Module containing helper methods for Task model.
 class Task < ApplicationRecord
-    belongs_to :list
+  belongs_to :todo
 
-    validates_presence_of :description
-
+  validates_presence_of :description
 end
-    

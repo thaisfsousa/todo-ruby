@@ -1,13 +1,21 @@
 
-h1{
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+  html{
+    background-color: rgb(242, 242, 223);
+  }
+  h1{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+  }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
+  h3{
+    padding:20px;
+  }
+
+  table {
+      width: 100%;
+      border: 3px solid #000000;
   }
   
   th {
@@ -16,6 +24,7 @@ table {
     padding: 10px; 
     margin-bottom: 50px;
     align-content: center;
+    border: 1px solid #000000;
   }
   
   td {
@@ -32,29 +41,51 @@ table {
     cursor: pointer;
     font-size: 16px;
     width: 100%;
-}
+  }
 
-input[type="submit"]:hover {
-  background-color: #a9a6a6;
-}
+  input[type="submit"]:hover {
+    background-color: #a9a6a6;
+  }
+
   
   .actions {
     white-space: nowrap;
     align-items: center;
+    border: 1px solid #000000;
   }
 
   .action{
     padding: 8px;
     color: black;
-    width: 100px;
+    width: 150px;
     margin-left: 15px;
     background-color: rgb(234, 232, 230);
     display: inline-block;
     text-align: center;
+    text-decoration: none;
+  }
+
+  .action_todo{
+    padding: 8px;
+    color: black;
+    width: 80px;
+    margin-left: 15px;
+    background-color: rgb(234, 232, 230);
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .action_todo:hover{
+    cursor: pointer;
+    color: white;
+    background-color: rgb(184, 156, 156);
   }
   
   .description{
-    width: 45%;
+    width: 50%;
+
+    border: 1px solid #000000;
   }
 
   .action:hover{
@@ -74,6 +105,9 @@ input[type="submit"]:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
+    text-decoration: none;
+
+    border: 1px solid #000000;
   }
 
   .newList:hover {
@@ -100,11 +134,57 @@ input[type="submit"]:hover {
   }
 
   hr{
-    padding: 20px;
-    color: white;
-    border: none;
+    padding: 0px;
+    color: rgb(0, 0, 0);
+    border: 1px solid black;
   }
 
   .show{
     background-color: rgb(208, 222, 231);
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    margin-left: 25%;
+    text-align: center;
+  }
+
+  .completed{
+    border: 1px solid #000000;
+  }
+
+  .checkbox-wrapper {
+    display: inline-block;
+}
+
+.custom-checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #000000;
+    border-radius: 4px; 
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    transform: scale(1.5); 
+    margin-left: 65px; 
+}
+
+  .custom-checkbox:checked {
+      background-color: #469e53;
+      border-color: #000000;
+  }
+
+  .custom-checkbox:checked::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 2px;
+    width: 3px;
+    height: 5px;
+    border: solid white;
+    border-width: 0 1px 1px 0;
+    transform: rotate(45deg);
   }

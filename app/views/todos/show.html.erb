@@ -1,0 +1,20 @@
+<h1>Todo Details</h1>
+
+<div class="show">
+
+    <tr>
+      <td class="description">
+        <h3>Description:
+        <%= @todo.description %>
+        </h3>
+      </td>
+      <hr>
+      <td class="completed">
+        <h3>Completed:
+          <%= @todo.completed ? 'Yes' : 'No' %>
+        </h3>
+      </td>
+    <td>
+
+  </div>
+<%= link_to 'Back', todos_path, class:'action' %>

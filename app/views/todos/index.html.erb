@@ -1,0 +1,29 @@
+<h1>Todo</h1>
+
+<div class="teste2">
+  <%= link_to 'Add New Todo', new_todo_path, class:"newList" %>
+</div>
+<table>
+  <thead>
+    <tr>
+      <th style="margin-right:50px">Description</th>
+      <th>Completed</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @todos.each do |todo| %>
+      <tr>
+        <td class="description"><%= todo.description %></td>
+        <td class="completed"><%= todo.completed ? 'Yes' : 'No' %></td>
+        <td class="actions">
+          <%= link_to 'Show', todo_path(todo), class:"action_todo" %>
+          <%= link_to 'Edit', edit_todo_path(todo), class:"action_todo" %>
+          <%= link_to 'Delete', todo_path(todo), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"action_todo"%>
+          <%= link_to 'View Tasks', todo_tasks_path(todo), class:"action_todo" %>
+          <%= link_to 'Add Task', new_todo_task_path(todo), class:"action_todo" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

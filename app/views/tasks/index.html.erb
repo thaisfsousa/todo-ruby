@@ -1,11 +1,12 @@
-<h1>All Tasks</h1>
+<h1>All Tasks for Todo <%= @todo.description %></h1>
 
-<%= link_to 'New Task', new_list_task_path, class:"newList" %>
-
+<div>
+  <%= link_to 'Add New Task', new_todo_task_path, class:"newList" %>
+</div>
 <table>
   <thead>
     <tr>
-      <th>Description</th>
+      <th style="margin-right:50px">Description</th>
       <th>Completed</th>
       <th>Actions</th>
     </tr>
@@ -13,15 +14,15 @@
   <tbody>
     <% @tasks.each do |task| %>
       <tr>
-        <td><%= task.description %></td>
-        <td><%= task.completed ? 'Yes' : 'No' %></td>
-        <td>
-          <%= link_to 'Show', list_task(task) %>
-          <%= link_to 'Edit', edit_list_task_path(task) %>
-          <%= link_to 'Delete', list_task_path(task), method: :delete, data: { confirm: 'Are you sure?', turbolinks: false } %>
+        <td class="description"><%= task.description %></td>
+        <td class="completed"><%= task.completed ? 'Yes' : 'No' %></td>
+        <td class="actions">
+          <%= link_to 'Show', todo_task_path(task.todo, task), class:"action" %>
+          <%= link_to 'Edit', edit_todo_task_path(task.todo, task), class:"action" %>
+          <%= link_to 'Delete', todo_task_path(task.todo, task), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"action"%>
         </td>
       </tr>
     <% end %>
   </tbody>
 </table>
-<%= link_to 'Back', lists_path, class:'action' %>
+<%= link_to 'Back', todos_path, class:'action' %>

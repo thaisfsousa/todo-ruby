@@ -1,16 +1,20 @@
 <h1>Task Details</h1>
 
 <div class="show">
-  <p>
-  <div style="padding:20px">
-    <strong>Description:</strong>
-    <%= @task.description %>
-  </div>
-  <div style="padding:20px">
-    <strong>Completed:</strong>
-    <%= @task.completed ? 'Yes' : 'No' %>
-  </div>
-  </p>
+
+    <tr>
+      <td class="description">
+        <h3>Description:
+        <%= @task.description %>
+        </h3>
+      </td>
+      <hr>
+      <td class="completed">
+        <h3>Completed:
+          <%= @task.completed ? 'Yes' : 'No' %>
+        </h3>
+      </td>
+    <td>
 
   </div>
-<%= link_to 'Back', lists_path, class:'action' %>
+<%= link_to 'Back', todo_tasks_path, class:'action' %>

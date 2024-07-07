@@ -1,5 +1,5 @@
-<h1>Editing</h1>
+<h1>Editing task for <%= @todo.description %></h1>
 
 <%= render 'form', task: @task %>
 
-<%= link_to 'Back', lists_path, class:'action' %>
+<%= link_to 'Back', todo_tasks_path, class:'action' %>
