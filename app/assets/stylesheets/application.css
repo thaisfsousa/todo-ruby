@@ -46,10 +46,11 @@ input[type="submit"]:hover {
   .action{
     padding: 8px;
     color: black;
-    border-radius: 10%;
-    width: 50px;
+    width: 100px;
     margin-left: 15px;
     background-color: rgb(234, 232, 230);
+    display: inline-block;
+    text-align: center;
   }
   
   .description{
@@ -59,6 +60,7 @@ input[type="submit"]:hover {
   .action:hover{
     cursor: pointer;
     color: white;
+    background-color: rgb(184, 156, 156);
   }
 
   .newList {
@@ -91,16 +93,18 @@ input[type="submit"]:hover {
     margin-left: 30%;
   }
 
-  .between2{
+  .spaces{
+    padding: 20px;
+    margin-left: 30%;
     display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
   }
 
   hr{
     padding: 20px;
     color: white;
     border: none;
+  }
+
+  .show{
+    background-color: rgb(208, 222, 231);
   }

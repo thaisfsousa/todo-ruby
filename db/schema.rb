@@ -21,13 +21,14 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_06_184529) do
   end
 
   create_table "tasks", force: :cascade do |t|
-    t.string "description", null: false
+    t.string "description"
     t.boolean "completed", default: false
-    t.integer "lists_id"
+    t.integer "list_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["lists_id"], name: "index_tasks_on_lists_id"
+    t.index ["list_id"], name: "index_tasks_on_list_id"
   end
 
   add_foreign_key "lists", "lists", column: "parent_list_id"
+  add_foreign_key "tasks", "lists"
 end

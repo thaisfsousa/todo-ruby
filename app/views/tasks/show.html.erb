@@ -1,14 +1,16 @@
 <h1>Task Details</h1>
 
-<p>
-  <strong>Description:</strong>
-  <%= @task.description %>
-</p>
+<div class="show">
+  <p>
+  <div style="padding:20px">
+    <strong>Description:</strong>
+    <%= @task.description %>
+  </div>
+  <div style="padding:20px">
+    <strong>Completed:</strong>
+    <%= @task.completed ? 'Yes' : 'No' %>
+  </div>
+  </p>
 
-p>
-  <strong>Completed:</strong>
-  <%= @task.completed ? 'Yes' : 'No' %>
-</p>
-
-<%= link_to 'Edit', edit_task_path(@list) %> |
-<%= link_to 'Back', lists_path %>
+  </div>
+<%= link_to 'Back', lists_path, class:'action' %>

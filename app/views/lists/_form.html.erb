@@ -1,12 +1,14 @@
 <%= form_with model: @list do |form| %>
-    <div class="between">
-        <%= form.text_field :description, class:"text-box" %>
-        <hr>
-        <div class="between2">
-            <%= form.label :completed, "Completed" %>
-            <%= form.check_box :completed %>
-        </div>
-    </div>
-    <%= form.submit %>
-
-  <% end %>
+  <div> 
+    Task Name
+      <%= form.text_field :description, class:"text-box" %>
+  </div>
+  <hr>
+  <div> 
+    <p>
+      <%= form.label :completed, "Completed" %>
+      <%= form.check_box :completed %>
+    </p>
+  </div>
+  <%= form.submit %>
+<% end %>

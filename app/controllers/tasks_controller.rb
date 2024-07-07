@@ -2,21 +2,20 @@ class TasksController < ApplicationController
   before_action :set_task, only: [:update, :show, :destroy, :edit]
 
   def index
-    @list = List.find(params[:list_id])
     @tasks = Task.all
   end
 
   def new
-    @list = List.find(params[:list_id])
     @task = Task.new
   end
 
   def create
     @list = List.find(params[:list_id])
-    @task.update(list_id: params[:id])
+    @task = @list.tasks.build(task_params)
+  
     if @task.save
       flash[:notice] = "Task criada com sucesso."
-      redirect_to @task
+      redirect_to [@list, @task]
     else
       flash.now[:alert] = @task.errors.full_messages.to_sentence
       render :new
@@ -24,10 +23,9 @@ class TasksController < ApplicationController
   end
 
   def update
-    @list = List.find(params[:list_id])
     if @task.update(task_params)
       flash[:notice] = "Task atualizada com sucesso."
-      redirect_to @task
+      redirect_to [@list, @task]
     else
       flash.now[:alert] = @task.errors.full_messages.to_sentence
       render :edit
@@ -38,10 +36,9 @@ class TasksController < ApplicationController
   end
 
   def destroy
-    @list = List.find(params[:list_id])
     @task.destroy
     flash[:notice] = "Task deletada com sucesso."
-    redirect_to list_task_path
+    redirect_to [@list, @task]
   end
 
   def edit
@@ -54,7 +51,8 @@ class TasksController < ApplicationController
   end
 
   def set_task
-    @task = Task.find(params[:task_id])
+    @list = List.find(params[:list_id])
+    @task = @list.tasks.find(params[:task_id])
   end
 
 end
