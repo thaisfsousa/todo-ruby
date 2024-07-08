@@ -6,8 +6,8 @@ Todo List is a service designed to manage Tasks Lists. This project handles oper
 ## Setup
 
 ### Requirements
-- Ruby 2.4.0
-- Rails 5.0.2
+- Ruby 3.2.2
+- Rails 7.1.3.4
 
 ### Building
 - Clone the repository: ```git clone https://github.com/thaisfsousa/todo-ruby.git```
@@ -31,3 +31,4 @@ http://localhost:3000
 ## Tests
 
 #### BDD tests - Rspec
+```bundle exec rspec```
