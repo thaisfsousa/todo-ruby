@@ -1,24 +1,33 @@
-# README
+# Todo List
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Todo List is a service designed to manage Tasks Lists. This project handles operations such as adding Todo Lists, retrieving avaiable Todo Lists, Edit Todo Lists, Remove Todo Lists, adding new Tasks into a Todo List, Retrieving Tasks from a Todo List, and Removing Tasks from a Todo List.
+<hr>
 
-Things you may want to cover:
+## Setup
 
-* Ruby version
+### Requirements
+- Ruby 2.4.0
+- Rails 5.0.2
 
-* System dependencies
+### Building
+- Clone the repository: ```git clone https://github.com/thaisfsousa/todo-ruby.git```
+- Navigate into project directory: ```cd todo-ruby```
+<hr>
 
-* Configuration
+## Run
+```
+bundle install
+rails s
+```
+<hr>
 
-* Database creation
+## Usage
 
-* Database initialization
+#### Access:
+http://localhost:3000
 
-* How to run the test suite
+<hr>
 
-* Services (job queues, cache servers, search engines, etc.)
+## Tests
 
-* Deployment instructions
-
-* ...
+#### BDD tests - Rspec
